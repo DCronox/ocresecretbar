@@ -1,0 +1,10 @@
+{
+  "name": "OCRE · Cocina y Bar Oculto",
+  "short_name": "OCRE",
+  "lang": "es-CO",
+  "start_url": "./",
+  "display": "browser",
+  "background_color": "#171614",
+  "theme_color": "#171614",
+  "icons": [{ "src": "assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

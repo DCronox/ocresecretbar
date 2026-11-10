@@ -1,0 +1,9 @@
+# OCRE · robots.txt
+User-agent: *
+Allow: /
+Disallow: /_legado/
+Disallow: /docs/
+Disallow: /tools/
+
+# PENDIENTE: reemplazar DOMINIO-PENDIENTE por el dominio definitivo (ver docs/PENDIENTES.md)
+Sitemap: https://DOMINIO-PENDIENTE/sitemap.xml

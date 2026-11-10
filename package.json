@@ -1,0 +1,14 @@
+{
+  "name": "ocresecretbar",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitio web público de OCRE · Cocina y Bar Oculto. Sitio estático sin dependencias en tiempo de ejecución.",
+  "scripts": {
+    "servir": "python -m http.server 5510 --bind 127.0.0.1",
+    "imagenes": "node tools/optimizar-imagenes.mjs",
+    "og": "node tools/generar-og.mjs"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.0"
+  }
+}

@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>OCRE · Cocina y bar oculto en Laureles, Medellín</title>
+<meta name="description" content="Ocre (Ocre Secret Bar) es un restaurante y bar oculto en Laureles, Medellín: cocina de autor, coctelería de autor, arte y música. Consulta la carta y reserva tu mesa.">
+<meta name="theme-color" content="#171614">
+<meta name="color-scheme" content="dark">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; frame-src https://www.google.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<!-- Canonical y URLs absolutas: se añaden cuando exista dominio definitivo (content/sitio.js → dominio). Ver docs/PENDIENTES.md -->
+<meta property="og:type" content="restaurant">
+<meta property="og:locale" content="es_CO">
+<meta property="og:site_name" content="OCRE · Cocina y Bar Oculto">
+<meta property="og:title" content="OCRE · Cocina y bar oculto en Laureles, Medellín">
+<meta property="og:description" content="Cocina de autor, coctelería de autor, arte y música en un bar oculto de Laureles.">
+<meta property="og:image" content="assets/img/og/ocre-og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="OCRE · Cocina y bar oculto · Laureles, Medellín">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap">
+<link rel="preload" as="image" type="image/avif" href="assets/img/cocteleria/negroni-clasico-1600.avif" imagesrcset="assets/img/cocteleria/negroni-clasico-800.avif 800w, assets/img/cocteleria/negroni-clasico-1600.avif 1600w" imagesizes="(max-width: 760px) 100vw, 42vw" fetchpriority="high">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/home.css">
+<script src="content/sitio.js" defer></script>
+<script src="content/galerias.js" defer></script>
+<script src="content/carta.js" defer></script>
+<script src="content/sonidos.js" defer></script>
+<script src="content/experiencias.js" defer></script>
+<script src="content/espacios.js" defer></script>
+<script src="content/resenas.js" defer></script>
+<script src="assets/js/core.js" defer></script>
+<script src="assets/js/home.js" defer></script>
+</head>
+<body data-schema>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="nav" id="nav">
+  <a class="nav__marca" href="#inicio" aria-label="OCRE, volver al inicio">OCRE</a>
+  <nav class="nav__menu" id="menu" aria-label="Principal">
+    <ul>
+      <li><a href="#universo">Universo</a></li>
+      <li><a href="#ritual">El ritual</a></li>
+      <li><a href="#espacios">Espacios</a></li>
+      <li><a href="#sounds">Ocre Sounds</a></li>
+      <li><a href="#noches">Noches</a></li>
+      <li><a href="#carta">Carta</a></li>
+      <li><a href="#visitanos">Visítanos</a></li>
+    </ul>
+    <a class="btn btn--solido btn--grande nav__reservar-movil" href="#reservas">Reservar mesa</a>
+    <p class="nav__pie-movil"><span data-dato="direccion"></span></p>
+  </nav>
+  <a class="btn btn--linea nav__reservar" href="#reservas">Reservar</a>
+  <button class="nav__toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">
+    <span class="sr">Abrir menú</span><i aria-hidden="true"></i><i aria-hidden="true"></i>
+  </button>
+</header>
+
+<main id="contenido">
+
+<!-- ===================== PORTADA ===================== -->
+<section class="hero" id="inicio" aria-labelledby="hero-titulo">
+  <figure class="hero__foto" id="hero-media"></figure>
+  <div class="hero__inner">
+    <p class="hero__lugar">Cocina y bar oculto en Laureles, Medellín</p>
+    <h1 class="hero__titulo" id="hero-titulo"><span class="pigmento">OCRE</span><span class="sr">, cocina y bar oculto en Laureles, Medellín</span></h1>
+    <p class="hero__lema">Un lugar que se descubre.</p>
+    <div class="hero__acciones">
+      <a class="btn btn--solido btn--grande" href="#reservas">Reservar mesa</a>
+      <a class="btn btn--texto" href="#universo">Entrar al universo</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== UNIVERSO ===================== -->
+<section class="universo" id="universo" aria-labelledby="universo-titulo">
+  <h2 id="universo-titulo" class="titulo-seccion universo__titulo revela-texto">El universo Ocre</h2>
+  <p class="universo__entrada revela-texto">El ocre es uno de los primeros colores que usó el ser humano: tierra molida, mezclada con agua, apoyada sobre la piedra. Es color de origen, de arcilla y de fuego.</p>
+
+  <figure class="universo__foto universo__foto--a" data-parallax="0.05">
+    <div class="revela" data-foto="assets/img/platos/molcajete-ocre" data-ancho="2" data-alto="3" data-alt="Aguacate, remolacha, berenjena y orellanas apilados sobre piedra oscura" data-sizes="(max-width: 760px) 90vw, 34vw"></div>
+    <figcaption class="leyenda">Materia: los ingredientes del <em>Molcajete Ocre</em></figcaption>
+  </figure>
+
+  <div class="universo__texto revela-texto">
+    <p>De esa idea nace Ocre: un punto de escape donde la percepción se vuelve memoria. Aquí el arte se experimenta, el sabor y el ritmo envuelven, y la mente baja el volumen.</p>
+    <p>La cocina trabaja con técnica y producto para provocar, no solo para alimentar. La barra prepara tragos de autor con cordiales y macerados de la casa. El espacio está pensado como una obra: texturas naturales, luz cálida y sombra. Y la música marca el pulso de la noche.</p>
+    <p class="universo__cierre">Todo eso sucede en un bar oculto. Hay que saber dónde llegar.</p>
+  </div>
+
+  <figure class="universo__foto universo__foto--b" data-parallax="-0.07">
+    <div class="revela" data-foto="assets/img/cocteleria/moss" data-ancho="2" data-alto="3" data-alt="Cóctel Moss en vaso tallado, con luz ámbar sobre la barra" data-sizes="(max-width: 760px) 70vw, 24vw"></div>
+    <figcaption class="leyenda">Luz de barra: <em>Moss</em>, cóctel de autor</figcaption>
+  </figure>
+
+  <ul class="pilares" aria-label="Lo que encontrarás">
+    <li><h3>Cocina</h3><p>Ingredientes que exploran, provocan y desafían, con técnica de alta cocina.</p></li>
+    <li><h3>Coctelería</h3><p>Tragos de autor pensados para acompañar la cocina.</p></li>
+    <li><h3>Arte</h3><p>Un espacio pensado como una obra: texturas, luz y materia.</p></li>
+    <li><h3>Sonoridad</h3><p>Música que despierta emociones a medida que avanza la noche.</p></li>
+  </ul>
+
+  <div class="puerta" id="puerta">
+    <button class="puerta__boton" type="button" aria-expanded="false" aria-controls="puerta-dentro" id="puerta-boton">
+      <span class="puerta__hoja puerta__hoja--izq" aria-hidden="true"></span>
+      <span class="puerta__hoja puerta__hoja--der" aria-hidden="true"></span>
+      <span class="puerta__llamado">Dale una señal. <span>Toca la puerta</span></span>
+    </button>
+    <div class="puerta__dentro" id="puerta-dentro" hidden>
+      <p class="puerta__titulo">Bienvenido al ritual.</p>
+      <p>Arte, sonido y gusto te esperan al otro lado.</p>
+      <a class="btn btn--solido" href="#reservas">Reservar mesa</a>
+    </div>
+  </div>
+</section>
+
+<div class="marquesina" aria-hidden="true"><div id="marquesina"></div></div>
+
+<!-- ===================== EL RITUAL DE LOS SENTIDOS ===================== -->
+<section class="ritual" id="ritual" aria-labelledby="ritual-titulo">
+  <div class="cabecera">
+    <h2 id="ritual-titulo" class="titulo-seccion revela-texto">El ritual de los sentidos</h2>
+    <p class="revela-texto">Seis capas de una misma noche. Elige una para entrar en su galería.</p>
+  </div>
+  <div class="ritual__escena">
+    <ol class="ritual__lista" id="estratos"></ol>
+    <div class="ritual__visor" id="ritual-visor" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- ===================== LOS ESPACIOS ===================== -->
+<section class="espacios" id="espacios" aria-labelledby="espacios-titulo">
+  <div class="espacios__cabecera">
+    <h2 id="espacios-titulo" class="titulo-seccion">Tres atmósferas, una misma noche</h2>
+    <p>Ocre se recorre por capas: la energía de la pista, la penumbra que invita a quedarse y un espacio reservado para compartir.</p>
+    <nav class="espacios__indice" aria-label="Espacios de Ocre" id="espacios-indice"></nav>
+  </div>
+  <div id="espacios-lista"></div>
+</section>
+
+<div class="trazo" aria-hidden="true"><svg viewBox="0 0 1200 60" preserveAspectRatio="none" focusable="false"><defs><linearGradient id="g-trazo-a" x1="0" x2="1"><stop offset="0" stop-color="#8E4F25" stop-opacity="0"/><stop offset=".25" stop-color="#B87835"/><stop offset=".6" stop-color="#E6BC7A"/><stop offset="1" stop-color="#8E4F25" stop-opacity="0"/></linearGradient></defs><path class="trazo__linea" d="M10 34 C 180 18, 320 46, 470 30 S 760 14, 900 32 S 1110 40, 1190 26" fill="none" stroke="url(#g-trazo-a)" stroke-width="3" stroke-linecap="round"/><path class="trazo__linea trazo__linea--fina" d="M60 42 C 260 36, 420 52, 620 40 S 980 30, 1140 38" fill="none" stroke="url(#g-trazo-a)" stroke-width="1" stroke-linecap="round" opacity=".6"/></svg></div>
+
+<!-- ===================== OCRE SOUNDS ===================== -->
+<section class="sounds" id="sounds" aria-labelledby="sounds-titulo">
+  <div class="cabecera cabecera--ancha">
+    <h2 id="sounds-titulo" class="titulo-seccion">Ocre Sounds</h2>
+    <p id="sounds-concepto"></p>
+  </div>
+  <div class="sounds__bloque">
+    <h3 class="subtitulo">Próximas noches</h3>
+    <div id="sounds-eventos"></div>
+  </div>
+  <div class="sounds__bloque">
+    <h3 class="subtitulo">Residentes e invitados</h3>
+    <div id="sounds-djs"></div>
+  </div>
+  <div class="sounds__bloque" id="sounds-archivo-bloque" hidden>
+    <h3 class="subtitulo">Noches anteriores</h3>
+    <div id="sounds-archivo"></div>
+  </div>
+</section>
+
+<!-- ===================== NOCHES OCRE ===================== -->
+<section class="noches" id="noches" aria-labelledby="noches-titulo">
+  <div class="cabecera">
+    <h2 id="noches-titulo" class="titulo-seccion">Noches Ocre</h2>
+    <p>Cada visita tiene un motivo. Cuéntanos el tuyo y te ayudamos a preparar la mesa.</p>
+  </div>
+  <ul class="ocasiones" id="ocasiones"></ul>
+</section>
+
+<div class="trazo trazo--papel" aria-hidden="true"><svg viewBox="0 0 1200 60" preserveAspectRatio="none" focusable="false"><defs><linearGradient id="g-trazo-b" x1="0" x2="1"><stop offset="0" stop-color="#8E4F25" stop-opacity="0"/><stop offset=".25" stop-color="#B87835"/><stop offset=".6" stop-color="#E6BC7A"/><stop offset="1" stop-color="#8E4F25" stop-opacity="0"/></linearGradient></defs><path class="trazo__linea" d="M10 34 C 180 18, 320 46, 470 30 S 760 14, 900 32 S 1110 40, 1190 26" fill="none" stroke="url(#g-trazo-b)" stroke-width="3" stroke-linecap="round"/><path class="trazo__linea trazo__linea--fina" d="M60 42 C 260 36, 420 52, 620 40 S 980 30, 1140 38" fill="none" stroke="url(#g-trazo-b)" stroke-width="1" stroke-linecap="round" opacity=".6"/></svg></div>
+
+<!-- ===================== CARTA ===================== -->
+<section class="carta" id="carta" aria-labelledby="carta-titulo">
+  <div class="carta__cabecera">
+    <h2 id="carta-titulo" class="titulo-seccion">La carta</h2>
+    <p class="carta__nota" id="carta-fuente"></p>
+  </div>
+  <div class="carta__tabs" role="tablist" aria-label="Secciones de la carta" id="carta-tabs"></div>
+  <div id="carta-paneles"></div>
+  <p class="carta__legal" id="carta-legal"></p>
+</section>
+
+<!-- ===================== RESEÑAS ===================== -->
+<section class="resenas" id="resenas" aria-labelledby="resenas-titulo">
+  <div class="resenas__grid">
+    <div>
+      <h2 id="resenas-titulo" class="titulo-seccion">Lo que dicen quienes ya cruzaron</h2>
+      <p class="resenas__texto">Las opiniones de nuestros visitantes viven en Google. Léelas allí y, si ya nos visitaste, cuéntanos cómo fue tu noche.</p>
+      <div class="resenas__acciones">
+        <a class="btn btn--linea" data-enlace="googleMaps" href="#" target="_blank" rel="noopener noreferrer">Leer reseñas en Google<span class="sr"> (abre en una pestaña nueva)</span></a>
+        <a class="btn btn--texto" data-enlace="googleMaps" href="#" target="_blank" rel="noopener noreferrer">Escribir una reseña<span class="sr"> (abre Google Maps en una pestaña nueva)</span></a>
+      </div>
+    </div>
+    <div class="calificacion" id="calificacion"></div>
+  </div>
+  <ul class="testimonios" id="testimonios" hidden></ul>
+</section>
+
+<!-- ===================== RESERVAS ===================== -->
+<section class="reservas" id="reservas" aria-labelledby="reservas-titulo">
+  <div class="reservas__principal">
+    <figure class="reservas__foto">
+      <div data-foto="assets/img/cocteleria/mocktail-de-fresa" data-ancho="2" data-alto="3" data-alt="Mocktail de fresa sobre un posavasos con el logotipo de Ocre" data-sizes="(max-width: 760px) 40vw, 14vw"></div>
+    </figure>
+    <h2 id="reservas-titulo" class="titulo-seccion">Reserva tu noche</h2>
+    <p>Las reservas se gestionan en <strong>Cluvi</strong>, el sistema oficial de reservas de Ocre. Allí ves la disponibilidad real y recibes la confirmación.</p>
+    <ol class="pasos">
+      <li><strong>Elige fecha y número de personas en Cluvi</strong><p>La reserva en línea admite <span data-dato="rangoPersonas">de 2 a 15 personas</span>.</p></li>
+      <li><strong>Completa tus datos</strong><p>En el formulario de Cluvi.</p></li>
+      <li><strong>Espera la confirmación de Cluvi</strong><p>Tu mesa no está reservada hasta que la recibas.</p></li>
+    </ol>
+    <a class="btn btn--solido btn--grande" data-enlace="reservas" href="#" target="_blank" rel="noopener noreferrer">Reservar en Cluvi<span class="sr"> (abre el sistema de reservas en una pestaña nueva)</span></a>
+    <p class="reservas__nota">Al pulsar saldrás de esta página hacia ocre.cluvi.co. ¿Grupo de más de 15 personas o evento privado? Usa la solicitud por WhatsApp.</p>
+  </div>
+
+  <form class="solicitud" id="solicitud" novalidate aria-labelledby="solicitud-titulo">
+    <h3 id="solicitud-titulo">Solicitud por WhatsApp</h3>
+    <p class="solicitud__ayuda">Prepara un mensaje con los datos de tu solicitud y lo abre en WhatsApp para que tú lo envíes. Enviar el mensaje <strong>no confirma</strong> la reserva: nuestro equipo te responderá por ese medio.</p>
+    <div class="campo">
+      <label for="f-nombre">Nombre</label>
+      <input id="f-nombre" name="nombre" autocomplete="name" required maxlength="60">
+      <p class="campo__error" id="e-nombre"></p>
+    </div>
+    <div class="campo-fila">
+      <div class="campo">
+        <label for="f-fecha">Fecha</label>
+        <input id="f-fecha" name="fecha" type="date" required>
+        <p class="campo__error" id="e-fecha"></p>
+      </div>
+      <div class="campo">
+        <label for="f-hora">Hora aproximada</label>
+        <select id="f-hora" name="hora">
+          <option>6:00 p. m.</option><option>7:00 p. m.</option><option selected>8:00 p. m.</option><option>9:00 p. m.</option><option>10:00 p. m.</option><option>Otra (la indico en notas)</option>
+        </select>
+      </div>
+    </div>
+    <div class="campo-fila">
+      <div class="campo">
+        <label for="f-personas">Personas</label>
+        <input id="f-personas" name="personas" type="number" inputmode="numeric" min="1" max="200" value="2" required>
+        <p class="campo__error" id="e-personas"></p>
+      </div>
+      <div class="campo">
+        <label for="f-ocasion">Ocasión</label>
+        <select id="f-ocasion" name="ocasion">
+          <option>Cena</option><option>Cita</option><option>Cumpleaños</option><option>Celebración</option><option>Evento privado</option><option>Otra</option>
+        </select>
+      </div>
+    </div>
+    <div class="campo">
+      <label for="f-notas">Notas <span class="opcional">(opcional)</span></label>
+      <textarea id="f-notas" name="notas" rows="3" maxlength="400" aria-describedby="f-notas-ayuda"></textarea>
+      <p class="campo__ayuda" id="f-notas-ayuda">Si tiene alguna necesidad dietética especial, alergia o intolerancia, por favor indíquelo en las notas de su reserva. </p>
+    </div>
+    <div class="check">
+      <input type="checkbox" id="f-autoriza" name="autoriza" required>
+      <label for="f-autoriza">Autorizo a Ocre a tratar mis datos para gestionar esta solicitud, según la <a href="legal/tratamiento-datos.html">Política de tratamiento de datos</a> y el <a href="legal/privacidad.html">Aviso de privacidad</a>. <span class="opcional">(obligatorio)</span></label>
+    </div>
+    <p class="campo__error" id="e-autoriza"></p>
+    <div class="check">
+      <input type="checkbox" id="f-comercial" name="comercial">
+      <label for="f-comercial">Quiero recibir novedades, eventos y comunicaciones comerciales de Ocre por WhatsApp. <span class="opcional">(opcional, puedes retirarlo cuando quieras)</span></label>
+    </div>
+    <button class="btn btn--solido" type="submit">Abrir WhatsApp con mi solicitud</button>
+    <p class="solicitud__estado" id="solicitud-estado" role="status" aria-live="polite"></p>
+  </form>
+</section>
+
+<!-- ===================== VISÍTANOS ===================== -->
+<section class="visitanos" id="visitanos" aria-labelledby="visitanos-titulo">
+  <h2 id="visitanos-titulo" class="titulo-seccion">Visítanos</h2>
+  <div class="visitanos__grid">
+    <dl class="datos">
+      <div><dt>Dirección</dt><dd><address data-dato="direccion">Tv 39D #39b-92, Laureles – Estadio, Medellín</address></dd></div>
+      <div><dt>Horario</dt><dd><ul class="horario" data-dato="horario"></ul><p class="estado-abierto" id="estado-abierto"></p></dd></div>
+      <div><dt>Contacto</dt><dd>
+        <ul class="contacto">
+          <li><a data-enlace="whatsapp" href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+          <li><a data-enlace="instagram" href="#" target="_blank" rel="noopener noreferrer"><span data-dato="instagramUsuario">Instagram</span></a></li>
+          <li><a data-enlace="email" href="#"><span data-dato="email">Correo</span></a></li>
+        </ul>
+      </dd></div>
+      <div class="datos__acciones">
+        <a class="btn btn--linea" data-enlace="googleMaps" href="#" target="_blank" rel="noopener noreferrer">Cómo llegar<span class="sr"> (abre Google Maps en una pestaña nueva)</span></a>
+        <a class="btn btn--texto" href="#reservas">Reservar mesa</a>
+      </div>
+    </dl>
+    <div class="mapa" id="mapa">
+      <div class="mapa__aviso">
+        <p class="mapa__titulo">Mapa interactivo</p>
+        <p>El mapa lo sirve Google, que puede instalar cookies y recibir tu dirección IP. Se carga solo si lo pides.</p>
+        <button class="btn btn--linea" type="button" id="mapa-cargar">Cargar mapa de Google</button>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="pie" id="pie"></footer>
+
+<div class="barra-movil" id="barra-movil">
+  <a class="btn btn--solido" data-enlace="reservas" href="#reservas" target="_blank" rel="noopener noreferrer">Reservar<span class="sr"> en Cluvi (abre en una pestaña nueva)</span></a>
+  <a class="btn btn--linea" data-enlace="whatsapp" href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+</div>
+
+<!-- Galería: una sola instancia reutilizada por las seis categorías -->
+<dialog class="galeria" id="galeria" aria-labelledby="galeria-titulo">
+  <div class="galeria__barra">
+    <p class="galeria__migas"><span>El ritual de los sentidos</span></p>
+    <button class="galeria__cerrar" type="button" data-cerrar>Cerrar<span class="sr"> galería</span></button>
+  </div>
+  <div class="galeria__cuerpo" id="galeria-cuerpo"></div>
+  <div class="visor" id="visor" hidden role="group" aria-roledescription="visor de imágenes" aria-label="Imagen ampliada">
+    <button class="visor__cerrar" type="button" data-visor-cerrar>Volver a la galería</button>
+    <figure class="visor__figura" id="visor-figura"></figure>
+    <div class="visor__nav">
+      <button type="button" data-visor="-1" aria-label="Imagen anterior">Anterior</button>
+      <p id="visor-contador" aria-live="polite"></p>
+      <button type="button" data-visor="1" aria-label="Imagen siguiente">Siguiente</button>
+    </div>
+  </div>
+</dialog>
+
+<div id="consentimiento-raiz"></div>
+<noscript><p class="noscript">Activa JavaScript para ver la carta y las galerías. Reservas: <a href="https://ocre.cluvi.co/bookings/32410">ocre.cluvi.co</a> · Tv 39D #39b-92, Laureles – Estadio, Medellín.</p></noscript>
+</body>
+</html>

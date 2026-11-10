@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ocre · Cocina y Bar Oculto · Laureles, Medellín</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300;1,500&family=Inter:wght@300;400;600&display=swap">
+<style>
+:root{--bg:#24160a;--bg2:#33200f;--ink:#f6e6c4;--mute:#c9aa7a;--ocre:#e0a43a;--rojo:#a8432a;--line:rgba(243,231,211,.14);
+--serif:'Cormorant Garamond',Georgia,serif;--sans:'Inter',system-ui,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#24160a;--bg2:#33200f;--ink:#f6e6c4;--mute:#c9aa7a}}
+:root[data-theme="dark"]{--bg:#24160a;--bg2:#33200f;--ink:#f6e6c4;--mute:#c9aa7a}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--bg);color:var(--ink);font:300 16px/1.7 var(--sans);overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--serif);font-weight:300;line-height:1.05}
+h2{font-size:clamp(2.4rem,6vw,4.6rem)}
+em{color:var(--ocre);font-style:italic}
+.grain{position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+#glow{position:fixed;width:420px;height:420px;border-radius:50%;pointer-events:none;z-index:1;background:radial-gradient(circle,rgba(224,164,58,.22),transparent 65%);transform:translate(-50%,-50%);left:50%;top:40%;transition:left .25s,top .25s}
+#intro{position:fixed;inset:0;z-index:100;background:var(--bg);display:grid;place-items:center;animation:out 1s 1.9s forwards}
+#intro span{font:300 clamp(3rem,12vw,8rem)/1 var(--serif);letter-spacing:.4em;color:var(--ocre);animation:in 1.6s ease both}
+@keyframes in{from{opacity:0;letter-spacing:1em;filter:blur(12px)}to{opacity:1;letter-spacing:.4em;filter:none}}
+@keyframes out{to{opacity:0;visibility:hidden}}
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:18px 5vw;backdrop-filter:blur(10px);background:linear-gradient(var(--bg),transparent)}
+nav b{font:500 1.6rem var(--serif);letter-spacing:.3em;color:var(--ocre)}
+nav div{display:flex;gap:26px;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase}
+nav a:hover{color:var(--ocre)}
+.btn{display:inline-block;padding:14px 34px;border:1px solid var(--ocre);color:var(--ocre);font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;cursor:pointer;background:none;position:relative;overflow:hidden;transition:color .4s;font-family:var(--sans)}
+.btn::before{content:"";position:absolute;inset:0;background:var(--ocre);transform:translateY(101%);transition:transform .4s;z-index:-1}
+.btn:hover{color:var(--bg)}.btn:hover::before{transform:none}
+.btn.fill{background:var(--ocre);color:var(--bg)}.btn.fill::before{background:var(--ink)}
+section{position:relative;z-index:2;padding:110px 6vw}
+.hero{min-height:100vh;display:grid;place-items:center;text-align:center;overflow:hidden;background:radial-gradient(ellipse at 50% 100%,rgba(224,164,58,.5),transparent 65%),radial-gradient(ellipse at 15% 0,rgba(168,67,42,.35),transparent 55%)}
+.hero h1{font-size:clamp(5rem,22vw,17rem);letter-spacing:.12em;color:var(--ocre);text-shadow:0 0 80px rgba(211,154,61,.35);animation:float 7s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-14px)}}
+.hero p{letter-spacing:.5em;text-transform:uppercase;font-size:.75rem;color:var(--mute);margin:10px 0 40px}
+.hero .btn{margin:0 6px 10px}
+.orb{position:absolute;border-radius:50%;filter:blur(60px);opacity:.5;animation:drift 12s ease-in-out infinite alternate}
+.o1{width:300px;height:300px;background:var(--rojo);left:-80px;top:30%}.o2{width:260px;height:260px;background:var(--ocre);right:-60px;top:12%;animation-delay:-5s}
+@keyframes drift{to{transform:translate(60px,-50px) scale(1.2)}}
+.marq{overflow:hidden;border-block:1px solid var(--line);padding:20px 0;z-index:2;position:relative;background:var(--bg2)}
+.marq div{display:flex;gap:60px;width:max-content;animation:mq 26s linear infinite;font:italic 300 2rem var(--serif);color:var(--mute);white-space:nowrap}
+@keyframes mq{to{transform:translateX(-50%)}}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:center;max-width:1200px;margin:auto}
+.about p{color:var(--mute);margin-top:22px;max-width:46ch}
+.pillars{display:grid;gap:18px}
+.pillar{border:1px solid var(--line);padding:26px;transition:.4s;background:var(--bg2)}
+.pillar:hover{border-color:var(--ocre);transform:translateX(10px)}
+.pillar h3{font-size:2rem;color:var(--ocre)}.pillar p{font-size:.9rem;margin:4px 0 0}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:14px;max-width:1200px;margin:40px auto 0}
+.ph{position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:16px;font:italic 1.3rem var(--serif);border:1px solid var(--line);transition:transform .5s}
+.ph::after{content:"";position:absolute;inset:0;background:inherit;transition:transform .8s;z-index:-1}
+.ph:hover{transform:scale(1.03)}.ph:hover::after{transform:scale(1.15)}
+.ph.t{grid-row:span 2}.ph.w{grid-column:span 2}
+.p1{background:linear-gradient(160deg,#a8432a,#3a1c0c)}.p2{background:radial-gradient(circle at 30% 30%,#e0a43a,#4a2810)}
+.p3{background:linear-gradient(20deg,#33200f,#b9782a)}.p4{background:radial-gradient(circle at 70% 70%,#c2602f,#24160a)}
+.p5{background:linear-gradient(120deg,#e0a43a,#7a3318)}.p6{background:radial-gradient(circle at 50% 0,#b9782a,#24160a)}
+.note{max-width:1200px;margin:14px auto 0;font-size:.78rem;color:var(--mute)}
+.rate{display:flex;gap:6vw;align-items:center;flex-wrap:wrap;max-width:1200px;margin:40px auto 0}
+.rate big{font:300 clamp(5rem,14vw,10rem)/1 var(--serif);color:var(--ocre)}
+.stars{color:var(--ocre);letter-spacing:.3em}
+.revs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;max-width:1200px;margin:40px auto 0}
+.rev{border:1px solid var(--line);padding:28px;background:var(--bg2)}
+.rev q{display:block;font:italic 1.35rem/1.4 var(--serif);quotes:none;margin:10px 0 16px}
+.rev small{color:var(--mute);letter-spacing:.15em;text-transform:uppercase}
+.res{max-width:1000px;margin:auto;display:grid;grid-template-columns:1fr 1.2fr;gap:6vw}
+form{display:grid;gap:16px}
+label{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+input,select,textarea{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);color:var(--ink);padding:10px 2px;font:300 1rem var(--sans);outline:0;transition:border-color .3s;color-scheme:dark}
+input:focus,select:focus,textarea:focus{border-color:var(--ocre)}
+select option{background:var(--bg)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.hrs{margin-top:26px;color:var(--mute);font-size:.9rem}.hrs b{color:var(--ink);font-weight:400}
+footer{position:relative;z-index:2;text-align:center;padding:80px 6vw 50px;border-top:1px solid var(--line);background:var(--bg2)}
+footer h2{color:var(--ocre);letter-spacing:.2em}
+footer p{color:var(--mute);margin:10px 0}footer .lk{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-top:20px;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase}
+.rv{opacity:0;transform:translateY(46px);transition:opacity 1s,transform 1s}.rv.on{opacity:1;transform:none}
+@media(max-width:800px){nav div a:not(.btn){display:none}.about,.res{grid-template-columns:1fr}.gal{grid-template-columns:repeat(2,1fr)}section{padding:80px 6vw}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}#intro{display:none}.rv{opacity:1;transform:none}}
+.door{position:relative;max-width:720px;height:340px;margin:50px auto 0;overflow:hidden;border:1px solid var(--ocre);cursor:pointer;background:radial-gradient(ellipse at center,#6a3412,#24160a)}
+.door .in{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:30px;opacity:0;transition:opacity 1s .5s}
+.door .in h3{font-size:clamp(2rem,5vw,3.4rem);color:var(--ocre)}
+.door i{position:absolute;top:0;bottom:0;width:50%;background:repeating-linear-gradient(90deg,#5a3716 0 14px,#6b4219 14px 15px),#5a3716;transition:transform 1.4s cubic-bezier(.7,0,.2,1);display:grid;place-items:center;font:italic 1.4rem var(--serif);color:var(--ocre);z-index:2}
+.door .l{left:0;border-right:1px solid var(--ocre)}.door .r{right:0}
+.door.open .l{transform:translateX(-101%)}.door.open .r{transform:translateX(101%)}.door.open .in{opacity:1}
+.menu{max-width:1000px;margin:40px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:0 6vw}
+.dish{padding:22px 0;border-bottom:1px solid var(--line);transition:padding .4s}.dish:hover{padding-left:14px}
+.dish h3{font-size:1.7rem}.dish span{color:var(--ocre);font-size:.66rem;letter-spacing:.25em;text-transform:uppercase}.dish p{color:var(--mute);font-size:.88rem}
+.sticky{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:30;box-shadow:0 8px 30px rgba(0,0,0,.5)}
+#carta{background:var(--ocre)!important;color:#2a1707}
+#carta h2,#carta h3{color:#2a1707}#carta em,#carta .dish span{color:#7a2a14}
+#carta .dish{border-color:rgba(42,23,7,.28)}#carta .dish p,#carta .note{color:#4a2f12}
+@media(max-width:800px){.menu{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="grain"></div><div id="glow"></div>
+<div id="intro"><span>OCRE</span></div>
+
+<nav><b>OCRE</b><div><a href="#nosotros">Nosotros</a><a href="#senal">La señal</a><a href="#carta">Carta</a><a href="#galeria">Galería</a><a href="#resenas">Reseñas</a><a href="#reservas" class="btn" style="padding:8px 20px">Reservar</a></div></nav>
+
+<header class="hero">
+  <i class="orb o1"></i><i class="orb o2"></i>
+  <div style="position:relative">
+    <p>Cocina y bar oculto · Laureles, Medellín</p>
+    <h1>Ocre</h1>
+    <p style="letter-spacing:.3em;margin-top:-6px">Arte, sonido y gusto</p>
+    <a class="btn fill" href="#reservas">Reservar mesa</a><a class="btn" href="#nosotros">El ritual</a>
+  </div>
+</header>
+
+<div class="marq"><div id="mq"></div></div>
+
+<section id="nosotros">
+  <div class="about">
+    <div class="rv">
+      <h2>Un punto<br>de <em>escape</em></h2>
+      <p>Ocre es un lugar donde la percepción se vuelve memoria. Aquí el arte se experimenta, el sabor y el ritmo envuelven, y la piel escucha mientras la mente baja el volumen. Nada se improvisa: cada textura, nota y aroma está pensado para ser inolvidable.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar rv"><h3>Cocina</h3><p>Ingredientes que exploran, provocan y desafían, con técnica de alta cocina.</p></div>
+      <div class="pillar rv"><h3>Coctelería</h3><p>Tragos de autor creados para maridar cada plato.</p></div>
+      <div class="pillar rv"><h3>Arte y sonido</h3><p>Cada espacio despierta emociones a través de la música.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="senal">
+  <h2 class="rv" style="text-align:center">Dale una <em>señal</em></h2>
+  <p class="rv" style="text-align:center;color:var(--mute);margin-top:16px">El bar está oculto. Toca la puerta.</p>
+  <div class="door rv" id="door"><i class="l">Ocre</i><i class="r">Ocre</i><div class="in"><div><h3>Bienvenido al ritual</h3><p style="color:var(--mute);margin:10px 0 24px">Arte, sonido y gusto te esperan al otro lado.</p><a class="btn fill" href="#reservas">Reservar mi entrada</a></div></div></div>
+</section>
+
+<section id="carta" style="background:var(--bg2)">
+  <h2 class="rv" style="text-align:center">La <em>carta</em></h2>
+  <div class="menu">
+    <div class="dish rv"><span>Entrada</span><h3>Cogollo betroot</h3><p>Cogollo sobre crema de aguacate, mayonesa de remolacha, papas al hilo y salsa XO.</p></div>
+    <div class="dish rv"><span>Crudo</span><h3>Crudo de atún</h3><p>Leche de tigre de mango y maracuyá, zanahoria cocida en naranja y miso.</p></div>
+    <div class="dish rv"><span>Fuerte</span><h3>Lomo duxelle</h3><p>Medallones de res rellenos, de técnica clásica y notas contundentes.</p></div>
+    <div class="dish rv"><span>Fuerte</span><h3>Panceta confitada</h3><p>Sobre ahuyama, mandarina y brotes, con jus de cerdo y papas criollas.</p></div>
+    <div class="dish rv"><span>Fuerte</span><h3>Salmón Ocre</h3><p>Filete sobre salsa de queso azul, con espárragos salteados.</p></div>
+    <div class="dish rv"><span>Postre</span><h3>Helado de tarta vasca</h3><p>Notas sutiles de aguardiente, crocante de centeno y flor de jamaica.</p></div>
+  </div>
+  <p class="note" style="text-align:center">Carta de ejemplo tomada de un directorio público; por confirmar con el restaurante.</p>
+</section>
+
+<section id="galeria" style="background:var(--bg2)">
+  <h2 class="rv" style="text-align:center">El <em>ritual</em> de los sentidos</h2>
+  <div class="gal rv">
+    <div class="ph p1 t">Cocina</div><div class="ph p2">Tragos de autor</div><div class="ph p3 w">El bar oculto</div>
+    <div class="ph p4">Sonoridad</div><div class="ph p5 w">Platos de autor</div><div class="ph p6">Arte</div>
+  </div>
+  <!-- Para poner fotos reales: reemplaza el background de .p1…p6 con url("data:image/jpeg;base64,...") -->
+  <p class="note">Espacios reservados para las fotos reales del restaurante.</p>
+</section>
+
+<section id="resenas">
+  <h2 class="rv">Lo que dicen <em>en Google</em></h2>
+  <div class="rate rv">
+    <big>4.9</big>
+    <div><div class="stars">★★★★★</div><p style="color:var(--mute)">Más de 250 reseñas en Google Maps</p><br>
+    <a class="btn" target="_blank" rel="noopener" href="https://maps.google.com/?cid=1167090936965291906">Ver todas las reseñas</a></div>
+  </div>
+  <div class="revs" id="revs"></div>
+</section>
+
+<section id="reservas" style="background:var(--bg2)">
+  <div class="res">
+    <div class="rv">
+      <h2>Reserva tu <em>noche</em></h2>
+      <p style="color:var(--mute);margin:20px 0">Envíanos tu solicitud por WhatsApp o gestiona tu reserva directamente en el sistema oficial de Ocre.</p>
+      <a class="btn fill" target="_blank" rel="noopener" href="https://ocre.cluvi.co/bookings/32410">Reservar en línea</a>
+      <div class="hrs"><b>Dirección</b><br>Tv 39D #39b-92, Laureles – Estadio, Medellín<br><br><b>Horario</b><br>Dom a mié · 6 pm – 1 am<br>Jue a sáb · 6 pm – 2 am</div>
+    </div>
+    <form id="f" class="rv">
+      <div><label>Nombre</label><input name="n" required></div>
+      <div class="row"><div><label>Fecha</label><input type="date" name="d" required></div><div><label>Hora</label><select name="h"><option>6:00 pm</option><option>7:00 pm</option><option>8:00 pm</option><option>9:00 pm</option><option>10:00 pm</option></select></div></div>
+      <div class="row"><div><label>Personas</label><select name="p"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7+</option></select></div><div><label>Ocasión</label><select name="o"><option>Cena</option><option>Cumpleaños</option><option>Cita</option><option>Evento privado</option></select></div></div>
+      <div><label>Notas</label><textarea name="m" rows="2"></textarea></div>
+      <button class="btn fill" type="submit">Enviar por WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <h2>Ocre</h2><p>Cocina y bar oculto · Est. 2025 MDE</p>
+  <div class="lk"><a href="https://wa.me/573127252045" target="_blank" rel="noopener">WhatsApp</a><a href="https://www.instagram.com/ocre_mde/" target="_blank" rel="noopener">Instagram</a><a href="mailto:ocre2025@gmail.com">Email</a><a href="https://maps.google.com/?cid=1167090936965291906" target="_blank" rel="noopener">Cómo llegar</a></div>
+</footer>
+
+<a class="btn fill sticky" href="#reservas">Reservar</a>
+<script>
+document.getElementById('door').onclick=function(){this.classList.toggle('open')};
+// Pega aquí las reseñas reales más valoradas de Google Maps: {n:"Nombre", t:"Texto de la reseña"}
+var REVIEWS=[];
+var mq=document.getElementById('mq'),w=['Arte','Sonido','Gusto','Cocina','Tragos de autor','Bar oculto','Laureles'];
+mq.innerHTML=w.concat(w).concat(w).concat(w).map(function(x){return '<span>'+x+' ✦</span>'}).join('');
+var rv=document.getElementById('revs');
+REVIEWS.forEach(function(r){var d=document.createElement('div');d.className='rev rv';d.innerHTML='<div class="stars">★★★★★</div><q></q><small></small>';d.querySelector('q').textContent='“'+r.t+'”';d.querySelector('small').textContent=r.n;rv.appendChild(d)});
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}})},{threshold:.15});
+document.querySelectorAll('.rv').forEach(function(el,i){el.style.transitionDelay=(i%3)*.12+'s';io.observe(el)});
+var g=document.getElementById('glow');
+addEventListener('pointermove',function(e){g.style.left=e.clientX+'px';g.style.top=e.clientY+'px'});
+document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();var f=e.target;
+var t='Hola Ocre, quiero reservar.\nNombre: '+f.n.value+'\nFecha: '+f.d.value+'\nHora: '+f.h.value+'\nPersonas: '+f.p.value+'\nOcasión: '+f.o.value+(f.m.value?'\nNotas: '+f.m.value:'');
+window.open('https://wa.me/573127252045?text='+encodeURIComponent(t),'_blank')});
+var d=document.querySelector('input[type=date]');d.min=new Date().toISOString().slice(0,10);
+</script>
+</body>
+</html>

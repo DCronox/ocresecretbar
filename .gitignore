@@ -1,0 +1,9 @@
+node_modules/
+*.log
+.DS_Store
+Thumbs.db
+# Originales de alta resolución: guardarlos fuera del repositorio o en originales/
+originales/
+
+# Configuración local de herramientas
+.claude/
